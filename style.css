@@ -88,6 +88,11 @@ h4 {
     gap: 12px;
 }
 
+.social-links a{
+    display: flex;
+    align-items: center;
+}
+
 a:hover {
     transform: scale(1.1);
 }
