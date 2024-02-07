@@ -10,7 +10,7 @@ body {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     color: #000;
-    background-color: #FFF;
+    background-color: rgb(255, 251, 243);
     display: flex;
     justify-content: center;
     align-items: center;
