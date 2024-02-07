@@ -3,8 +3,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    color: white;
-    background-color: #000;
+    color: #000;
+    background-color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
