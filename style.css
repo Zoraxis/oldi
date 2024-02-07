@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --flower-v-offset: -8.25vh;
+}
+
 body {
+    position: relative;
     font-family: 'Montserrat', sans-serif;
     color: #000;
     background-color: #FFF;
@@ -15,7 +20,8 @@ body {
 }
 
 img {
-    max-width: 85vw;
+    max-width: 75vw;
+    z-index: 1;
 }
 
 a {
@@ -83,4 +89,68 @@ h4 {
 
 a:hover {
     transform: scale(1.1);
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.flower-vertical {
+    z-index: -1;
+}
+
+.flower-horizontal {
+    position: fixed;
+    width: 60vw;
+}
+
+.flower-top-1 {
+    left: -5vw;
+    top: -7vh;
+}
+.flower-top-2 {
+    left: 51vw;
+    top: -7vh;
+}
+
+.flower-bottom-1 {
+    bottom: -7vh;
+    left: -5vw;
+}
+.flower-bottom-2 {
+    bottom: -7vh;
+    left: 51vw;
+}
+
+.flower-vertical {
+    position: fixed;
+    height: 30vh;
+}
+
+.flower-left-1 {
+    left: var(--flower-v-offset);
+    top: 15vh;
+    transform: rotateX(180deg);
+}
+
+.flower-left-2 {
+    left: var(--flower-v-offset);
+    top: 52.5vh;
+    transform: rotateY(180deg);
+}
+
+.flower-right-1 {
+    right: var(--flower-v-offset);
+    top: 15vh;
+    transform: rotateX(180deg);
+}
+
+.flower-right-2 {
+    right: var(--flower-v-offset);
+    top: 52.5vh;
+    transform: rotateY(180deg);
 }

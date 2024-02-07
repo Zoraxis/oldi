@@ -1,4 +1,5 @@
 @media only screen and (max-width: 500px) {
+
     .description,
     .hebrew-text {
         font-weight: 300;
@@ -7,5 +8,52 @@
 
     .logo {
         width: 225px;
+    }
+
+    .flower-top-1 {
+        top: 0;
+        width: 110vw;
+        max-width: 110vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .flower-bottom-1 {
+        bottom: 0;
+        width: 110vw;
+        max-width: 110vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .flower-top-2,
+    .flower-bottom-2 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .flower-top {
+        top: -10vh;
+    }
+
+    .flower-vertical {
+        width: 9vw;
+    }
+
+    .flower-left-1 {
+        top: 20vh;
+    }
+
+    .flower-right-1 {
+        top: 20vh;
+    }
+
+    .flower-left-2 {
+        top: 52.5vh;
+    }
+
+    .flower-right-2 {
+        top: 52.5vh;
     }
 }
