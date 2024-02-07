@@ -155,3 +155,9 @@ a:hover {
     top: 52.5vh;
     transform: rotateY(180deg);
 }
+
+#bg{
+    width: 150vw;
+    max-width: 150vw;
+    object-fit: cover;
+}
