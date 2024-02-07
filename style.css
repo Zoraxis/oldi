@@ -98,6 +98,7 @@ a:hover {
     height: 100vh;
     top: 0;
     left: 0;
+    pointer-events: none;
 }
 
 .flower-vertical {
@@ -113,6 +114,7 @@ a:hover {
     left: -5vw;
     top: -7vh;
 }
+
 .flower-top-2 {
     left: 51vw;
     top: -7vh;
@@ -122,6 +124,7 @@ a:hover {
     bottom: -7vh;
     left: -5vw;
 }
+
 .flower-bottom-2 {
     bottom: -7vh;
     left: 51vw;
