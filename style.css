@@ -16,17 +16,23 @@ body {
 
 .container {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .logo {
-    width: 175px;
-    height: 175px;
+    width: 200px;
+    height: 200px;
     object-position: 50% 50%;
     border-radius: 100%;
     border: 0;
-    margin-bottom: 15px;
-    /* box-shadow: rgba(154, 201, 193, 0.5) 0px 25px 55px, rgba(154, 201, 193, 0.5) 0px -25px 55px, rgba(154, 201, 193, 0.5) 25px 0px 55px, rgba(154, 201, 193, 0.5) -25px 0px 55px */
-    /* box-shadow: rgba(154, 201, 193, 1) 0px 0px 50px */
+}
+
+.title-img{
+    width: 600px;
+    height: 135px;
 }
 
 a {
@@ -48,7 +54,7 @@ a {
 .social-links {
     text-align: left;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 h1,
