@@ -71,7 +71,7 @@ anim({
     // rotate: "+=345deg"
   },
   anim: {
-    scale: 1.65,
+    scale: 1.575,
     // rotate: "+=15deg"
   },
   duration: 1750,
