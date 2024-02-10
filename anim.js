@@ -7,6 +7,7 @@ const anim = ({
   starting,
   anim,
   duration = 1500,
+  delay = 1500,
   easing = "spring(1, 80, 10, 0)",
 }) => {
   const social_links_count = document.querySelectorAll(target).length;
@@ -38,6 +39,7 @@ const anim = ({
     active.add({
       targets: getLink(index),
       duration,
+      delay,
       complete: completeHandle,
       ...anim,
     });
@@ -69,8 +71,9 @@ anim({
     // rotate: "+=345deg"
   },
   anim: {
-    scale: 1 + Math.random() * 0.4,
+    scale: 1.65,
     // rotate: "+=15deg"
   },
-  duration: 1500
+  duration: 1750,
+  delay: 3000
 });
