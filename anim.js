@@ -66,11 +66,11 @@ anim({
   target: ".social-links a",
   starting: {
     scale: 1,
-    rotate: "+=345deg"
+    // rotate: "+=345deg"
   },
   anim: {
     scale: 1 + Math.random() * 0.4,
-    rotate: "+=15deg"
+    // rotate: "+=15deg"
   },
   duration: 1500
 });
