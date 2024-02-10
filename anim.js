@@ -2,55 +2,75 @@ const getRand = (min, max) => {
   return Math.round(Math.random() * (max - min) + min);
 };
 
-const social_links_count =
-  document.querySelector(".social-links").children.length;
-let links = [];
+const anim = ({
+  target,
+  starting,
+  anim,
+  duration = 1500,
+  easing = "spring(1, 80, 10, 0)",
+}) => {
+  const social_links_count = document.querySelectorAll(target).length;
+  let links = [];
 
-let active, prev;
+  let active, prev;
 
-const defParams = {
-  easing: "spring(1, 80, 10, 0)",
-  scale: 1.2,
-  duration: 1000,
-  delay: 0,
-};
+  const defParams = {
+    // easing,
+    duration,
+    delay: 0,
+  };
 
-for (let i = 0; i < social_links_count; i++) {
-  links.push(i);
-}
-
-let index = links[getRand(0, links.length - 1)];
-
-const getLink = (id) => {
-  const _id =
-    id <= 0 ? 1 : id + 1 > social_links_count ? social_links_count : id + 1;
-  return `.social-links a:nth-child(${_id})`;
-};
-
-const createAnim = () => {
-  prev = active;
-  active = anime.timeline(defParams);
-  active.add({
-    scale: 1.2,
-    targets: getLink(index),
-    complete: completeHandle,
-  });
-  active.add({
-    targets: getLink(index),
-    scale: 1,
-  });
-};
-
-const completeHandle = () => {
-  links = links.filter((item) => item != index);
-  if (links.length == 0) {
-    for (let i = 0; i < social_links_count; i++) {
-      links.push(i);
-    }
+  for (let i = 0; i < social_links_count; i++) {
+    links.push(i);
   }
-  const rand = getRand(0, links.length - 1);
-  index = links[rand];
+
+  let index = links[getRand(0, links.length - 1)];
+
+  const getLink = (id) => {
+    const _id =
+      id <= 0 ? 1 : id + 1 > social_links_count ? social_links_count : id + 1;
+    return `${target}:nth-child(${_id})`;
+  };
+
+  const createAnim = () => {
+    prev = active;
+    active = anime.timeline(defParams);
+    active.add({
+      targets: getLink(index),
+      duration,
+      complete: completeHandle,
+      ...anim,
+    });
+    active.add({
+      targets: getLink(index),
+      ...starting,
+    });
+  };
+
+  const completeHandle = () => {
+    links = links.filter((item) => item != index);
+    if (links.length == 0) {
+      for (let i = 0; i < social_links_count; i++) {
+        links.push(i);
+      }
+    }
+    const rand = getRand(0, links.length - 1);
+    index = links[rand];
+    createAnim();
+  };
+
   createAnim();
 };
 
-createAnim();
+anim({
+  target: ".social-links a",
+  starting: {
+    scale: 1,
+    rotate: "+=345deg"
+  },
+  anim: {
+    scale: 1 + Math.random() * 0.4,
+    rotate: "+=15deg"
+  },
+  duration: 1500
+});
