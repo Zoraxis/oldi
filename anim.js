@@ -46,6 +46,8 @@ const anim = ({
     active.add({
       targets: getLink(index),
       ...starting,
+      duration: duration * 0.5,
+      easing: 'linear'
     });
   };
 
@@ -71,7 +73,7 @@ anim({
     // rotate: "+=345deg"
   },
   anim: {
-    scale: 1.5,
+    scale: 1.4,
     // rotate: "+=15deg"
   },
   duration: 1750,
